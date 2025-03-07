@@ -1,0 +1,51 @@
+{
+  "name": "recoil-examples",
+  "version": "1.0.0",
+  "description": "Examples for [Recoil](https://recoiljs.org/).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickbeerendonk/recoil-examples.git"
+  },
+  "author": "Rick Beerendonk",
+  "license": "EUPL-1.2",
+  "bugs": {
+    "url": "https://github.com/rickbeerendonk/recoil-examples/issues"
+  },
+  "homepage": "https://github.com/rickbeerendonk/recoil-examples#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run validate"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf node_modules",
+    "eslint": "eslint . --ext .js,.jsx,.mjs --cache",
+    "eslint-fix": "eslint . --ext .js,.jsx,.mjs --cache --fix",
+    "prettier": "prettier --list-different '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
+    "prettier-fix": "prettier --write '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
+    "start": "node ./server/server.js",
+    "validate": "npm run eslint && npm run prettier"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-plugin-jsx-a11y": "^6",
+    "eslint-plugin-react": "^7",
+    "eslint-plugin-react-hooks": "^5",
+    "husky": "^8",
+    "prettier": "^3",
+    "rimraf": "^6"
+  },
+  "dependencies": {
+    "@babel/core": "^7",
+    "@babel/preset-env": "^7",
+    "@babel/preset-react": "^7",
+    "core-js": "^3",
+    "esbuild": "^0",
+    "react": "^19",
+    "react-dom": "^19",
+    "serve": "^14",
+    "zustand": "^5"
+  }
+}
